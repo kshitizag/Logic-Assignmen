@@ -1,10 +1,21 @@
+/**
+ * @file customstack.h
+ * @brief File defining the stack data structure and related functions
+ * @version 0.1
+ * @date 2022-10-23
+ */
+
+/**
+ * PREPROCESSOR GUARDS
+ */
 #ifndef customstack_h
 #define customstack_h
+
 #include <stdio.h>
 #include <stdlib.h>
 
-/*! \struct
- *  \brief Data Structure to implement stack
+/**
+ * @brief Implementation of the stack data structure
  */
 struct stack
 {
@@ -13,7 +24,11 @@ struct stack
     char* items;  /**< A pointer to an array holding the data in the stack*/
 };
 
-/*! \brief 
+/**
+ * @brief Creates a new stack
+ * 
+ * @param [in] capacity The maximum number of elements the stack can hold
+ * @returns A pointer to the created stack
  */
 struct stack* newStack(int capacity)
 {
@@ -26,33 +41,62 @@ struct stack* newStack(int capacity)
     return pt;
 }
  
-// Function to check if the stack is empty
+/**
+ * @brief Checks if the stack is empty
+ * 
+ * @param [in] pt Pointer to the stack to be checked
+ * @retval 0 If the stack is NOT EMPTY
+ * @retval 1 If the stack is EMPTY
+ */
 int isEmpty(struct stack* pt) {
-    return pt->top == -1;                   // or return size(pt) == 0;
+    // Uses the stack's top to find out if its empty
+    return pt->top == -1;
 }
  
-//Function to check if the stack is full
+/**
+ * @brief Checks if the stack is full
+ * 
+ * @param [in] pt Pointer to the stack to be checked
+ * @retval 0 If the stack is NOT FULL
+ * @retval 1 If the stack is FULL
+ */
 int isFull(struct stack* pt) {
+    // Uses the stack's top and maxsize to find out if its empty
     return pt->top == pt->maxsize - 1;
 }
  
-//Function to add an element `x` to the stack
-void push(struct stack* pt, char x)
+/**
+ * @brief Adds an item to the stack
+ * 
+ * @param [in] pt Pointer to the stack to be used
+ * @param [in] item The @c char to be pushed
+ * 
+ * @warning Using this function on a full (at maxsize) stack will lead to Stack Overflow Error
+ */
+void push(struct stack* pt, char item)
 {
-    // check if the stack is already full. Then inserting an element would
-    // lead to stack overflow
+    // check if the stack is full
     if (isFull(pt))
     {
+        // throw stack overflow error
         printf("Error: Stack Overflow\n");
+        return;
     }
     // add an element and increment the top's index
-    pt->items[++pt->top] = x;
+    pt->items[++pt->top] = item;
 }
  
-//Function to return the top element of the stack
+/**
+ * @brief Returns the item at the top of the stack
+ * 
+ * @param [in] pt Pointer to the stack to be used
+ * @returns The @c char at the top of the stack
+ * 
+ * @warning Using this function on an empty stack will return @c \0
+ */
 char peek(struct stack* pt)
 {
-    // check for an empty stack
+    // check if the stack is empty
     if (!isEmpty(pt)) {
         return pt->items[pt->top];
     }
@@ -62,21 +106,38 @@ char peek(struct stack* pt)
     }
 }
  
-// Function to pop a top element from the stack
+/**
+ * @brief Removes the item at the top of the stack
+ * 
+ * @param [in] pt Pointer to the stack to be used
+ * @returns The @c char at the top of the stack
+ * 
+ * @warning Using this function on an empty stack will lead to Stack Underflow Error
+ */
 char pop(struct stack* pt)
 {
-    // check for stack underflow
+    // check if the stack is empty
     if (isEmpty(pt))
     {
+        // throw stack underflow error
         printf("Error: Stack Underflow\n");
+        return;
     } 
     // decrement stack size by 1 and (optionally) return the popped element
     return pt->items[pt->top--];
 }
 
-// Function to clear the stack from memory
+/**
+ * @brief Clears a previously created stack from memory
+ * 
+ * @param [in] pt Pointer to the stack to be used
+ * 
+ * @warning A stack should not be referenced after calling this function on it, as it might lead to undefined behaviour
+ */
 void clearStack(struct stack* pt){
+    // free the data array
     free(pt->items);
+    // free the stack structure
     free(pt);
 }
 #endif
