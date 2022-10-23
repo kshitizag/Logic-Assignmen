@@ -297,7 +297,7 @@ Steps taken to improve the code:
 
     > Increases memory usage a little, but improves readability and understanding of the code
 
- - Ignore any whitespaces in the expression
+ - Ignoring any white spaces in the expression
 
     > Increases code robustness
 
