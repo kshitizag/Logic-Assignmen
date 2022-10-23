@@ -272,6 +272,6 @@ The truth value of a propositional logic formula by traversing the tree in a bot
 Our Team consists of the following 4 people:
 
 1. Aryan Gupta, @c 2021A7PS0162H
-2. Kshitiz Agrawal, @c 2021A7PSH
-3. Mihir Kulkarni, @c 2021A7PSH
+2. Kshitiz Agarwal, @c 2021A7PS1818H
+3. Mihir Kulkarni, @c 2021A7PS2689H
 4. 
