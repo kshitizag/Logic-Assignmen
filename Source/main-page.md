@@ -64,7 +64,7 @@ and a separate .c file containing separate functions for each assignment Task (1
   <br><br>
    > getPrecedence() has processing time independent of the size of the input
   <br><br>
-   > outLen() and getPrefix() have processing times which increase linearly with he size of their input
+   > outLen() and getPrefix() have processing times which increase linearly with the size of their input
 
 
 ----
@@ -75,7 +75,7 @@ and a separate .c file containing separate functions for each assignment Task (1
   <br><br>
    > All atom structures take up the same memory space
   <br><br>
-   > valueOfAtom() and evaluate() have processing times which increase linearlywith the size of their input
+   > valueOfAtom() and evaluate() have processing times which increase linearly with the size of their input
   <br><br>
    > NOT(), AND(), OR(), IMPL() have processing times independent of the input size
 
