@@ -263,6 +263,7 @@ The truth value of a propositional logic formula by traversing the tree in a bot
 
 
 
+
 ----
 
 
