@@ -274,4 +274,4 @@ Our Team consists of the following 4 people:
 1. Aryan Gupta, @c 2021A7PS0162H
 2. Kshitiz Agarwal, @c 2021A7PS1818H
 3. Mihir Kulkarni, @c 2021A7PS2689H
-4. 
+4. Soumya Choudhury,@c 2021A7PS2674H
