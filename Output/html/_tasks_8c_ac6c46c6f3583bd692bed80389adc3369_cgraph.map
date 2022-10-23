@@ -1,0 +1,15 @@
+<map id="Task1" name="Task1">
+<area shape="rect" id="node1" title="Task 1 solution." alt="" coords="5,231,63,256"/>
+<area shape="rect" id="node2" href="$infixtoprefix_8h.html#a8f48c2662bc01cc964c398d88a181c26" title="Returns the prefix form of the given infix expression." alt="" coords="111,231,184,256"/>
+<area shape="rect" id="node3" href="$customstack_8h.html#a31ba2595e559fb8feed4f4ba422e18c2" title="Clears a previously created stack from memory." alt="" coords="245,5,329,31"/>
+<area shape="rect" id="node4" href="$infixtoprefix_8h.html#a60911e761bbcf080110de72f5565af24" title="Returns an integer representing the precedence of the input operator." alt="" coords="232,55,341,80"/>
+<area shape="rect" id="node5" href="$utilities_8h.html#a77923b6727493200507b625bb4871950" title="Checks if the given character is a valid propositional logic atom." alt="" coords="255,104,318,129"/>
+<area shape="rect" id="node6" href="$customstack_8h.html#a840eb6b3392c61fc9d0e2960234f9508" title="Checks if the stack is empty." alt="" coords="389,304,460,329"/>
+<area shape="rect" id="node7" href="$customstack_8h.html#aa91cc18c0450ee7d62218dc7276274a1" title="Creates a new stack." alt="" coords="247,205,326,231"/>
+<area shape="rect" id="node8" href="$infixtoprefix_8h.html#a7cd5c2ec8f11c9e5bdd5be35b968edf2" title="A helper function to find the length of the outputprefix expression ( char array) for a given input i..." alt="" coords="256,255,317,280"/>
+<area shape="rect" id="node9" href="$customstack_8h.html#a953ecbd684c67219206e56da0b3590f8" title="Returns the item at the top of the stack." alt="" coords="261,304,312,329"/>
+<area shape="rect" id="node10" href="$customstack_8h.html#aad56703da63e93be068a51c59b64b3bd" title="Removes the item at the top of the stack." alt="" coords="265,353,308,379"/>
+<area shape="rect" id="node11" href="$customstack_8h.html#a1ece07f8b243b9c0660ed791be12b02e" title="Adds an item to the stack." alt="" coords="261,403,312,428"/>
+<area shape="rect" id="node13" href="$utilities_8h.html#a15c07eb9b04483fbe96ca7e2b2fc5aca" title="Returns the length of the input string." alt="" coords="257,452,316,477"/>
+<area shape="rect" id="node12" href="$customstack_8h.html#a4b4d6e5d7ca79857463d9ba9497bcce1" title="Checks if the stack is full." alt="" coords="398,403,451,428"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="getPrefix" name="getPrefix">
+<area shape="rect" id="node1" title=" " alt="" coords="5,231,79,256"/>
+<area shape="rect" id="node2" href="$customstack_8h.html#a31ba2595e559fb8feed4f4ba422e18c2" title="Clears a previously created stack from memory." alt="" coords="139,5,223,31"/>
+<area shape="rect" id="node3" href="$infixtoprefix_8h.html#a81ee41f7483bc17e495151bf41f40997" title=" " alt="" coords="127,55,236,80"/>
+<area shape="rect" id="node4" href="$utilities_8h.html#a017f641e71a174c5410f916d654f172a" title=" " alt="" coords="150,104,213,129"/>
+<area shape="rect" id="node5" href="$customstack_8h.html#a840eb6b3392c61fc9d0e2960234f9508" title="Checks if the stack is empty." alt="" coords="284,304,355,329"/>
+<area shape="rect" id="node6" href="$customstack_8h.html#aa91cc18c0450ee7d62218dc7276274a1" title="Creates a new stack." alt="" coords="142,205,221,231"/>
+<area shape="rect" id="node7" href="$infixtoprefix_8h.html#a885a0713d89204896b5ac6fd54ff9d6b" title=" " alt="" coords="151,255,212,280"/>
+<area shape="rect" id="node8" href="$customstack_8h.html#a953ecbd684c67219206e56da0b3590f8" title="Returns the item at the top of the stack." alt="" coords="156,304,207,329"/>
+<area shape="rect" id="node9" href="$customstack_8h.html#aad56703da63e93be068a51c59b64b3bd" title="Removes the item at the top of the stack." alt="" coords="160,353,203,379"/>
+<area shape="rect" id="node10" href="$customstack_8h.html#a1ece07f8b243b9c0660ed791be12b02e" title="Adds an item to the stack." alt="" coords="156,403,207,428"/>
+<area shape="rect" id="node12" href="$utilities_8h.html#a5ab8a7eaf0c212051a8a3a0159820a84" title=" " alt="" coords="152,452,211,477"/>
+<area shape="rect" id="node11" href="$customstack_8h.html#a4b4d6e5d7ca79857463d9ba9497bcce1" title="Checks if the stack is full." alt="" coords="293,403,346,428"/>
+</map>

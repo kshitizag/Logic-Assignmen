@@ -1,0 +1,6 @@
+<map id="makeTreeFromPrefix" name="makeTreeFromPrefix">
+<area shape="rect" id="node1" title="Makes a rooted binary parse tree from the given prefix expression." alt="" coords="5,55,148,80"/>
+<area shape="rect" id="node2" href="$customtree_8h.html#a08ca2fb7d4bd31d3ea94f30d7879ff3d" title="Creates a new binary tree node with the given value." alt="" coords="196,5,284,31"/>
+<area shape="rect" id="node3" href="$utilities_8h.html#a77923b6727493200507b625bb4871950" title="Checks if the given character is a valid propositional logic atom." alt="" coords="209,55,271,80"/>
+<area shape="rect" id="node4" href="$utilities_8h.html#a15c07eb9b04483fbe96ca7e2b2fc5aca" title="Returns the length of the input string." alt="" coords="211,104,269,129"/>
+</map>

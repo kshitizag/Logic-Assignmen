@@ -1,0 +1,5 @@
+<map id="Source/customtree.h" name="Source/customtree.h">
+<area shape="rect" id="node1" title="File defining the binary data structure for the parse tree and related functions." alt="" coords="5,5,148,31"/>
+<area shape="rect" id="node2" href="$_tasks_8c.html" title="Contains wrapper functions for individual Tasks and code to test them." alt="" coords="20,152,133,177"/>
+<area shape="rect" id="node3" href="$logicformulas_8h.html" title="File defining a propsitional logic atom and related functions to fully evaluate a propositional logic..." alt="" coords="57,79,211,104"/>
+</map>

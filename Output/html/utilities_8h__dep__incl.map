@@ -1,0 +1,7 @@
+<map id="Source/utilities.h" name="Source/utilities.h">
+<area shape="rect" id="node1" title="File containing common helper functions for all other functions." alt="" coords="127,5,245,31"/>
+<area shape="rect" id="node2" href="$customtree_8h.html" title="File defining the binary data structure for the parse tree and related functions." alt="" coords="5,79,148,104"/>
+<area shape="rect" id="node4" href="$logicformulas_8h.html" title="File defining a propsitional logic atom and related functions to fully evaluate a propositional logic..." alt="" coords="78,152,233,177"/>
+<area shape="rect" id="node5" href="$infixtoprefix_8h.html" title="File containing all necessary functions to convert an infix propositional logic formula expression in..." alt="" coords="257,152,400,177"/>
+<area shape="rect" id="node3" href="$_tasks_8c.html" title="Contains wrapper functions for individual Tasks and code to test them." alt="" coords="99,225,212,251"/>
+</map>

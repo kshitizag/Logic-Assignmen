@@ -1,0 +1,7 @@
+<map id="Task2" name="Task2">
+<area shape="rect" id="node1" title="Task 2 solution." alt="" coords="5,36,63,61"/>
+<area shape="rect" id="node2" href="$customtree_8h.html#a08ca2fb7d4bd31d3ea94f30d7879ff3d" title="Creates a new binary tree node with the given value." alt="" coords="301,5,389,31"/>
+<area shape="rect" id="node3" href="$customtree_8h.html#adedfc12b8b6238a0e6e3a0b0de231744" title="Makes a rooted binary parse tree from the given prefix expression." alt="" coords="111,73,253,99"/>
+<area shape="rect" id="node4" href="$utilities_8h.html#a77923b6727493200507b625bb4871950" title="Checks if the given character is a valid propositional logic atom." alt="" coords="314,67,377,92"/>
+<area shape="rect" id="node5" href="$utilities_8h.html#a15c07eb9b04483fbe96ca7e2b2fc5aca" title="Returns the length of the input string." alt="" coords="316,116,375,141"/>
+</map>

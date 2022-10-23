@@ -1,0 +1,9 @@
+<map id="evaluate" name="evaluate">
+<area shape="rect" id="node1" title="Evaluate the given parse tree expression in a bottom up fashion." alt="" coords="5,129,75,155"/>
+<area shape="rect" id="node2" href="$logicformulas_8h.html#abd53df8063740570ae084ef28352366a" title="Perfoms (inp1 AND inp2)" alt="" coords="145,5,195,31"/>
+<area shape="rect" id="node3" href="$logicformulas_8h.html#a67bf9cab8d136a7c4073e0f3277be58b" title="Perfoms (inp1 IMPLIES inp2)" alt="" coords="144,55,196,80"/>
+<area shape="rect" id="node4" href="$utilities_8h.html#a77923b6727493200507b625bb4871950" title="Checks if the given character is a valid propositional logic atom." alt="" coords="139,104,201,129"/>
+<area shape="rect" id="node5" href="$logicformulas_8h.html#a398b7ec932fcf36d98349b79e70ddfc5" title="Performs (NOT inp)" alt="" coords="146,153,194,179"/>
+<area shape="rect" id="node6" href="$logicformulas_8h.html#ae0934252be7330886b1045615e9bba35" title="Perfoms (inp1 OR inp2)" alt="" coords="149,203,191,228"/>
+<area shape="rect" id="node7" href="$logicformulas_8h.html#a251d3e494b3e606199968b1c05f4da10" title="Returns the truth value of the propositional logic atom using the given list of atoms and their truth..." alt="" coords="123,252,217,277"/>
+</map>

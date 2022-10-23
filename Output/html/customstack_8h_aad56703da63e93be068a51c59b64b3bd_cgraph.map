@@ -1,0 +1,4 @@
+<map id="pop" name="pop">
+<area shape="rect" id="node1" title="Removes the item at the top of the stack." alt="" coords="5,5,48,31"/>
+<area shape="rect" id="node2" href="$customstack_8h.html#a840eb6b3392c61fc9d0e2960234f9508" title="Checks if the stack is empty." alt="" coords="96,5,167,31"/>
+</map>
