@@ -36,7 +36,16 @@ and a separate .c file containing separate functions for each assignment Task (1
    <br><br>
    > The memory space taken up by the stack increases linearly with its maxsize, but is constant throughout its lifetime (till it is cleared from the memory) in our program.
    <br><br>
-   > push(), peek(), pop(), isEmpty(), isFull(), newStack() have processing times independent of the size of their inputs
+   > - push()
+   > - peek()
+   > - pop()
+   > - isEmpty()
+   > - isFull()
+       >> Processing times independent of the size of their inputs
+   > <br>
+   > - newStack() 
+   > - clearStack()
+       >> Processing time dependent on the system (here: independent of input size)
 
 
 ----
@@ -49,9 +58,14 @@ and a separate .c file containing separate functions for each assignment Task (1
   <br><br>
    > The memory space taken up by the binary tree increases linearly with the number of nodes it has, but is constant throughout its lifetime (till it is cleared from the memory) in our program.
   <br><br>
-   > inorderTraversal(), getHeight(), makeTreeFromPrefix() have processing times which increase linearly with the size of their input
-  <br><br>
-   > createNode() has processing time independent of the size of its input 
+   > - inorderTraversal()
+   > - getHeight()
+   > - makeTreeFromPrefix() 
+       >> Processing times which increase linearly with the size of their input
+   > <br>
+   > - createNode() 
+   > - clearTree()
+       >> Processing time dependent on the system (here: independent of input size)
 
 
 ----
@@ -60,11 +74,12 @@ and a separate .c file containing separate functions for each assignment Task (1
 
    > This file contains all necessary functions to convert an infix propositional logic formula expression into its prefix form
   <br><br>
-   > inorderTraversal(), getHeight(), makeTreeFromPrefix() have processing times which increase linearly with the size of their input
-  <br><br>
-   > getPrecedence() has processing time independent of the size of the input
-  <br><br>
-   > outLen() and getPrefix() have processing times which increase linearly with the size of their input
+   > - outLen()
+   > - getPrefix()
+       >> Processing times which increase linearly with the size of their input
+   > <br>
+   > - getPrecedence()
+       >> Processing time independent of the size of the input
 
 
 ----
@@ -74,10 +89,16 @@ and a separate .c file containing separate functions for each assignment Task (1
    > This file contains definition for the propositional logic @ref atom data structure, defines boolean True @ref T and boolean False @ref F constants, and related functions for finding the truth value of a logical formula
   <br><br>
    > All atom structures take up the same memory space
-  <br><br>
-   > valueOfAtom() and evaluate() have processing times which increase linearly with the size of their input
-  <br><br>
-   > NOT(), AND(), OR(), IMPL() have processing times independent of the input size
+   >
+   > - valueOfAtom()
+   > - evaluate() 
+       >> Processing times which increase linearly with the size of their input
+   > <br>
+   > - NOT()
+   > - AND()
+   > - OR()
+   > - IMPL() 
+       >> Processing times independent of the input size
 
 
 ----
@@ -89,7 +110,7 @@ and a separate .c file containing separate functions for each assignment Task (1
 @note All codes are tested on the same machine with similar conditions.
 Mean execution time is calculated across 5 different executions with the same input.
 
- > *Machine Specifications*
+ > *Test Machine Specifications*
  > 1. Processor: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz   1.19 GHz
  > 2. Operating System: Windows 11 Home Single Language; Version: 22H2
  > 3. System Type: 64-bit operating system, x64-based processor
@@ -316,13 +337,40 @@ Few Steps that can be taken to improve the code:
 
 Steps taken to improve the code:
 
- - Making the function return 
-    > 
+ - Making the function return the length of the substring used in creating the subtree (instead of finding the location of next node iteratively)
 
-Few Steps that can be taken to improve the code:
+    > Improves code readability
 
- - Allow multiple characters and various symbols as logical atoms
-    > 
+ - Ignore any whitespaces in the expression
+
+    > Increases code robustness
+
+
+----
+
+### Task 3
+
+Steps taken to improve the code:
+
+ - Adding brackets if the node doesn,t represent a propositional atom
+
+    > Makes the output more presentable as an infix notation formula
+
+
+----
+
+### Task 5
+
+Steps taken to improve the code:
+
+ - Creating an array of atom structures to represent the propositional logic atom truth values instead of creating two arrays and using a common reference
+
+    > Makes the code more readable and easy to work with
+
+
+ - Defining T (representing True) and F (representing False) as macro constants
+
+    > makes the code uniform and reduces data misuse
 
 
 ----

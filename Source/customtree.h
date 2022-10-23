@@ -41,6 +41,7 @@ void inorderTraversal(struct node* root) {
   if (root->left != NULL || root->right != NULL){
     printf("(");
   }
+  // Traversing the tree inorder, recursively
   inorderTraversal(root->left);
   printf("%c", root->item);
   inorderTraversal(root->right);
@@ -98,18 +99,24 @@ int makeTreeFromPrefix(struct node* root, char* prefixExp){
   if (prefixExp[0] == ' ' || prefixExp[0] == '\t' || prefixExp[0] == '\n'){
     return makeTreeFromPrefix(root, prefixExp+1);
   }
+  // set value for current node
   root->item = prefixExp[0];
   if (isAtom(prefixExp[0]))
   {
     return 1;
   } else {
     int left = 0;
+    // create left subtree iff the current operator is not ~
     if (prefixExp[0] != '~'){
       root->left = createNode('\0');
       left = makeTreeFromPrefix(root->left, prefixExp + 1);
     }
+
+    // create right subtree
     root->right = createNode('\0');
     int right = makeTreeFromPrefix(root->right, prefixExp + 1 + left);
+
+    // the length of the current node substring in the input
     return (left + right + 1);
   }
 }
