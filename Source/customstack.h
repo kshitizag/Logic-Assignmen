@@ -16,7 +16,7 @@
 #include <stdlib.h>
 
 /**
- * @brief Implementation of the stack data structure
+ * @brief Implementation of the stack data structure with @c char items
  */
 struct stack
 {
@@ -27,6 +27,8 @@ struct stack
 
 /**
  * @brief Creates a new stack
+ * 
+ * @note Memory for the stack and its data is dynamically allocated
  * 
  * @param [in] capacity The maximum number of elements the stack can hold
  * @returns A pointer to the created stack
@@ -47,8 +49,8 @@ struct stack* newStack(int capacity)
  * @brief Checks if the stack is empty
  * 
  * @param [in] pt Pointer to the stack to be checked
- * @retval 0 If the stack is NOT EMPTY
- * @retval 1 If the stack is EMPTY
+ * @retval 0 If the stack is *NOT EMPTY*
+ * @retval 1 If the stack is *EMPTY*
  */
 int isEmpty(struct stack* pt) {
   // Uses the stack's top to find out if its empty
@@ -59,8 +61,8 @@ int isEmpty(struct stack* pt) {
  * @brief Checks if the stack is full
  * 
  * @param [in] pt Pointer to the stack to be checked
- * @retval 0 If the stack is NOT FULL
- * @retval 1 If the stack is FULL
+ * @retval 0 If the stack is *NOT FULL*
+ * @retval 1 If the stack is *FULL*
  */
 int isFull(struct stack* pt) {
   // Uses the stack's top and maxsize to find out if its empty

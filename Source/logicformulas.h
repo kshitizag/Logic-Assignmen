@@ -47,7 +47,8 @@ char IMPL(char, char);
  * @param [in] atoms The input list of atom names and their truth values
  * @retval T for boolean True
  * @retval F for boolean False
- * @retval '\0' if the atom is not found in given list
+ * 
+ * @warning \0 is returned if the atom is not found in given list
  */
 char valueOfAtom(char nm, struct atom atoms[]){
   // find the number of atoms using pointer sizes

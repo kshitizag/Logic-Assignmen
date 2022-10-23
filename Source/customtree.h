@@ -51,6 +51,7 @@ void inorderTraversal(struct node* root) {
 /**
  * @brief Creates a new binary tree node with the given value
  * 
+ * @note
  * The memory for the node is dynamically allocated
  * 
  * @param [in] value The @c char to be used as the node's value
@@ -76,6 +77,8 @@ struct node* createNode(char value) {
  *   -# All whitespace between characters will be ignored
  *   -# The expression is considered to be case sensitive (a and A are different atoms)
  *   .
+ * 
+ * @note
  * The memory for the tree is dynamically allocated
  * 
  * @param [out] root The pointer to the root of the binary parse tree
@@ -115,7 +118,8 @@ int makeTreeFromPrefix(struct node* root, char* prefixExp){
  * @param [in] root Pointer to the root of the binary tree to be used
  * @returns The height of the given binary tree from the given root
  * 
- * Height of a binary tree with only one node is considered to be @c 1 .
+ * @note
+ * Height of a binary tree with only one node is considered to be @c 1 and
  * @c 0 is returned for @c NULL input
  */
 int height(struct node * root){

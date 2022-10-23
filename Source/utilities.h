@@ -19,7 +19,7 @@ int strLen(char*);
  * @brief Checks if the given character is a valid propositional logic atom
  * 
  * @param [in] chr The @c char to be checked
- * @retval 0 If @c chr is NOT a valid atom
+ * @retval 0 If @c chr is *NOT* a valid atom
  * @retval 1 If @c chr is a valid atom
  */
 int isAtom(char chr){

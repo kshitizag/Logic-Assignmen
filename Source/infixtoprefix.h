@@ -27,7 +27,7 @@ char* getPrefix(char*);
  * Some notes about the input and the function:
  *   -# The input must be a well formed propositional logic formula expression in infix form
  *   -# All whitespace between characters will be ignored
- *   -# The formula need not be well bracketed, in case of missing brackets, for precedence see getPrecedence()
+ *   -# The formula need not be well bracketed, in case of missing brackets, precedence is calculated by getPrecedence()
  *   -# The expression is considered to be case sensitive (a and A are different atoms)
  *   .
  * The memory for the output is dynamically allocated. \ref stack data structure is used to store the operators untl they are needed
@@ -114,10 +114,10 @@ char* getPrefix(char* infixExp){
  *   -# +
  *   -# >
  *   .
- * @c -1 is returned if the oprtr is not one of the above
+ * @c -1 is returned if the @c oprtr is not one of the above
  * 
  * @param [in] oprtr The operator whose precedence is to be checked
- * @returns An @c int representing the oprtr's precedence
+ * @returns An @c int representing the @c oprtr 's precedence
  */
 int getPrecedence(char oprtr){
   switch (oprtr)
@@ -138,7 +138,7 @@ int getPrecedence(char oprtr){
 /**
  * @brief A helper function to find the length of the outputprefix expression ( @c char array) for a given input infix expression
  * 
- * Note: 1 is added for \0 at the end of the string
+ * @note @c \0 at the end of the string is counted too
  * 
  * @param [in] infixExp The input infix expression
  * @returns The length of the output prefix expression
