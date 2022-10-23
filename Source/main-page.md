@@ -82,9 +82,19 @@ and a separate .c file containing separate functions for each assignment Task (1
 
 ----
 
-## Task Solutions and Code Examples
+## Task Solutions and Code Tests with Some Examples
 
 **File:** Tasks.c
+
+@note All codes are tested on the same machine with similar conditions.
+Mean execution time is calculated across 5 different executions with the same input.
+
+ > *Machine Specifications*
+ > 1. Processor: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz   1.19 GHz
+ > 2. Operating System: Windows 11 Home Single Language; Version: 22H2
+ > 3. System Type: 64-bit operating system, x64-based processor
+ > 4. Installed RAM: 8.00 GB (7.70 GB usable)
+
 
 ----
 
@@ -108,10 +118,12 @@ and a separate .c file containing separate functions for each assignment Task (1
 1. 
   > Input: @code char* infixExpression = " a + b > ~ ( b + c ) " @endcode
   > Output: @code The expression in prefix form: ">+ab~+bc" @endcode
+  > Mean Execution Time: 0.31 seconds
 
 2. 
   > Input: @code char* infixExpression = "(((p)*(q)))>(r))" @endcode
   > Output: @code The expression in prefix form: ">*pqr" @endcode
+  > Mean Execution Time: 0.3 seconds
 
 
 ----
@@ -140,10 +152,12 @@ and a separate .c file containing separate functions for each assignment Task (1
 1. 
   > Input: @code char* infixExpression = " a + b > ~ ( b + c ) " @endcode
   > Output: @code The prefix expression is converted into a rooted binary parse tree and stored at address "00000276e0871610" @endcode
+  > Mean Execution Time: 0.302 seconds
 
 2. 
   > Input: @code char* infixExpression = "(((p)*(q)))>(r))" @endcode
   > Output: @code The prefix expression is converted into a rooted binary parse tree and stored at address "0000016aa6b21610" @endcode
+  > Mean Execution Time: 0.290 seconds
 
 
 ----
@@ -172,10 +186,12 @@ and a separate .c file containing separate functions for each assignment Task (1
 1. 
   > Input: @code char* infixExpression = " a + b > ~ ( b + c ) " @endcode
   > Output: @code The infix expression back by in-order traversal of the parse tree: "((a+b)>(~(b+c)))" @endcode
+  Mean Execution Time: 0.288 seconds
 
 2. 
   > Input: @code char* infixExpression = "(((p)*(q)))>(r))" @endcode
   > Output: @code The infix expression back by in-order traversal of the parse tree: "((p*q)>r)" @endcode
+  Mean Execution Time: 0.322 seconds
 
 
 ----
@@ -203,10 +219,12 @@ and a separate .c file containing separate functions for each assignment Task (1
 1. 
   > Input: @code char* infixExpression = " a + b > ~ ( b + c ) " @endcode
   > Output: @code The height of a parse tree: "4" @endcode
+  > Mean Execution Time: 0.295 seconds
 
 2. 
   > Input: @code char* infixExpression = "(((p)*(q)))>(r))" @endcode
   > Output: @code The height of a parse tree: "3" @endcode
+  > Mean Execution Time: 0.290 seconds
 
 
 ----
@@ -245,6 +263,7 @@ and a separate .c file containing separate functions for each assignment Task (1
    b   ->   T
    c   ->   F
 The truth value of a propositional logic formula by traversing the tree in a bottom up fashion: "F" @endcode
+  > Mean Execution Time: 0.283 seconds
 
 2. 
   > Input: @code char* infixExpression = "(((p)*(q)))>(r))" 
@@ -255,23 +274,64 @@ The truth value of a propositional logic formula by traversing the tree in a bot
    q   ->   F
    r   ->   F
 The truth value of a propositional logic formula by traversing the tree in a bottom up fashion: "T" @endcode
+  > Mean Execution Time: 0.290 seconds
 
 
 ----
 
 ## Alternate Algorithms and Efficiency
 
+General steps taken to improve the code:
 
+ - Include guards (also called Preprocessor guards) are added in all header files to safe-guard from double-inclusion
+
+### Task 1
+
+Steps taken to improve the code:
+
+ - Iterating from end to start of the input string instead of reversing it
+
+    > Reversing a string decreases time efficiency
+
+ - Creating a stack structure instead of using stack functions (push, pop, ...) on an array
+
+    > Increases memory usage a little, but improves readability and understanding of the code
+
+ - Ignore any whitespaces in the expression
+
+    > Increases code robustness
+
+
+Few Steps that can be taken to improve the code:
+
+ - Allow multiple characters and various symbols as logical atoms
+
+    > Not taken as it will lead to more rules regarding atom naming, much more cases, and greater complexity
 
 
 ----
 
 
+### Task 2
+
+Steps taken to improve the code:
+
+ - Making the function return 
+    > 
+
+Few Steps that can be taken to improve the code:
+
+ - Allow multiple characters and various symbols as logical atoms
+    > 
+
+
+----
+
 ## Team Information
 
-Our Team consists of the following 4 people:
+Our Team consists of the following 4 students:
 
 1. Aryan Gupta, @c 2021A7PS0162H
 2. Kshitiz Agarwal, @c 2021A7PS1818H
 3. Mihir Kulkarni, @c 2021A7PS2689H
-4. Soumya Choudhury,@c 2021A7PS2674H
+4. Soumya Choudhury, @c 2021A7PS2674H

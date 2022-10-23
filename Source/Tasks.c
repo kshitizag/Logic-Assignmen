@@ -102,7 +102,8 @@ int main(){
   printf("The expression in prefix form: \"%s\"\n", prefixExpression);
   struct node* root = Task2(prefixExpression);
   printf("The prefix expression is converted into a rooted binary parse tree and stored at address \"%p\"\n", root);
-  printf("The infix expression back by in-order traversal of the parse tree: \""); Task3(root);
+  printf("The infix expression back by in-order traversal of the parse tree: \"");
+  Task3(root);
   printf("\"\n");
   int heightOfTree = Task4(root);
   printf("The height of a parse tree: \"%d\"\n", heightOfTree);

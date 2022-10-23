@@ -94,7 +94,7 @@ int makeTreeFromPrefix(struct node* root, char* prefixExp){
     root = NULL;
     return 0;
   }
-  // ignore whitespaces, start from next character
+  // ignore whitespaces, if encountered, start from next character
   if (prefixExp[0] == ' ' || prefixExp[0] == '\t' || prefixExp[0] == '\n'){
     return makeTreeFromPrefix(root, prefixExp+1);
   }
