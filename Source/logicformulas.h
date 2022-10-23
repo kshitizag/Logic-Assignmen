@@ -71,6 +71,8 @@ char valueOfAtom(char nm, struct atom atoms[]){
  * @param [in] atoms The list of propositional atoms and their truth values
  * @retval T for boolean True
  * @retval F for boolean False
+ * 
+ * @see For examples see [Task 5](index.html#autotoc_md22 "Task 5 Examples")
  */
 char evaluate(struct node* root, struct atom atoms[]){
   // return the value of an atom if the value of the node is an atom

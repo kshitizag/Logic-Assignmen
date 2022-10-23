@@ -30,6 +30,7 @@ struct node {
  * @brief Performs inorder traversal of the parse tree and prints it to stdout
  * 
  * @param [in] root Pointer to the root of the parse tree
+ * @see For examples see [Task 3](index.html#autotoc_md18 "Task 3 Examples")
  */
 void inorderTraversal(struct node* root) {
   // do nothing for a null input
@@ -72,6 +73,10 @@ struct node* createNode(char value) {
 /**
  * @brief Makes a rooted binary parse tree from the given prefix expression
  * 
+ * @param [out] root The pointer to the root of the binary parse tree
+ * @param [in] prefixExp The proposition logic formula expression in prefix form ( @c char array pointer)
+ * @returns The length of the expression string used to make the tree (will be the length of the input prefix expression if it is well formed)
+ * 
  * Some notes about the input and the function:
  *   -# The input must be a well formed propositional logic formula expression in prefix form
  *   -# All whitespace between characters will be ignored
@@ -81,10 +86,7 @@ struct node* createNode(char value) {
  * @note
  * The memory for the tree is dynamically allocated
  * 
- * @param [out] root The pointer to the root of the binary parse tree
- * @param [in] prefixExp The proposition logic formula expression in prefix form ( @c char array)
- * 
- * @returns The length of the expression string used to make the tree (will be the length of the input prefix expression if it is well formed)
+ * @see For examples see [Task 2](index.html#autotoc_md16 "Task 2 Examples")
  */
 int makeTreeFromPrefix(struct node* root, char* prefixExp){
   // if the expression is empty, the node is set to null
@@ -119,19 +121,21 @@ int makeTreeFromPrefix(struct node* root, char* prefixExp){
  * @returns The height of the given binary tree from the given root
  * 
  * @note
- * Height of a binary tree with only one node is considered to be @c 1 and
- * @c 0 is returned for @c NULL input
+ * 0 is returned for @c NULL input <br>
+ * Height of a binary tree with only one node is considered to be 1
+ * 
+ * @see For examples see [Task 4](index.html#autotoc_md20 "Task 4 Examples")
  */
-int height(struct node * root){
+int getHeight(struct node * root){
   // NULL input means 0 height
   if (root == NULL){
     return 0;
   }
 
   // find the height of the left subtree
-  int leftH = height(root->left);
+  int leftH = getHeight(root->left);
   // find the height of the right subtree
-  int rightH = height(root->right);
+  int rightH = getHeight(root->right);
   
   // return the greater of the two, plus one for the current node
   if (leftH < rightH){

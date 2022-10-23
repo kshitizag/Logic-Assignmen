@@ -17,6 +17,9 @@
  * @param [in] infixExp Infix propositional logic expression
  * @returns Prefix propositional logic
 expression form of the input
+ * 
+ * @see getPrefix()
+ * @see For examples see [Task 1](index.html#autotoc_md14 "Task 1 Examples")
  */
 char* Task1(char* infixExp){
   return getPrefix(infixExp);
@@ -27,6 +30,9 @@ char* Task1(char* infixExp){
  * 
  * @param [in] prefixExp Prefix propositional logic expression
  * @returns Pointer to the root of the  rooted binary parse tree of the input
+ * 
+ * @see makeTreeFromPrefix(), createNode()
+ * @see For examples see [Task 2](index.html#autotoc_md16 "Task 2 Examples")
  */
 struct node* Task2(char* prefixExp){
   struct node* root = createNode('\0');
@@ -40,6 +46,9 @@ struct node* Task2(char* prefixExp){
  * In-order traversal of the binary tree to get the infix expression
  * 
  * @param [in] root Infix propositional logic expression form of the input
+ * 
+ * @see inorderTraversal()
+ * @see For examples see [Task 3](index.html#autotoc_md18 "Task 3 Examples")
  */
 void Task3(struct node* root){
   inorderTraversal(root);
@@ -49,10 +58,13 @@ void Task3(struct node* root){
  * @brief Computes the height of the parse tree with the given root
  * 
  * @param [in] root Pointer to the root of the parse tree
- * @returns @c int height of the parse tree
+ * @returns The @c int height of the parse tree
+ * 
+ * @see getHeight()
+ * @see For examples see [Task 4](index.html#autotoc_md20 "Task 4 Examples")
  */
 int Task4(struct node* root){
-  return height(root);
+  return getHeight(root);
 }
 
 /**
@@ -62,6 +74,9 @@ int Task4(struct node* root){
  * @param [in] atoms Array of propostional logic atoms and their truth values
  * @retval T for boolean True
  * @retval F for boolean False
+ * 
+ * @see evaluate()
+ * @see For examples see [Task 5](index.html#autotoc_md22 "Task 5 Examples")
  */
 char Task5(struct node* root, struct atom atoms[]){
   return evaluate(root, atoms);
@@ -73,9 +88,12 @@ char Task5(struct node* root, struct atom atoms[]){
  * @returns 0 for successful execution
  */
 int main(){
-  // Given Input
-  char* infixExpression = " a + b > ~ ( b + c ) ";
-  struct atom truthValues[] = {{'a', T}, {'b', T}, {'c', F}};
+  // Example 1
+  // char* infixExpression = " a + b > ~ ( b + c ) ";
+  // struct atom truthValues[] = {{'a', T}, {'b', T}, {'c', F}};
+  // Example 2
+  char* infixExpression = "(((p)*(q)))>(r))";
+  struct atom truthValues[] = {{'p', F}, {'q', F}, {'r', F}};
 
   // Processing and Output
   int numberOfAtoms = sizeof(truthValues)/sizeof(truthValues[0]);

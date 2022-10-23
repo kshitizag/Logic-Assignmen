@@ -24,6 +24,9 @@ char* getPrefix(char*);
 /**
  * @brief Returns the prefix form of the given infix expression
  * 
+ * @param [in] infixExp The proposition logic formula expression in infix form ( @c char array pointer)
+ * @returns The proposition logic formula expression in prefix form ( @c char array pointer)
+ * 
  * Some notes about the input and the function:
  *   -# The input must be a well formed propositional logic formula expression in infix form
  *   -# All whitespace between characters will be ignored
@@ -32,8 +35,8 @@ char* getPrefix(char*);
  *   .
  * The memory for the output is dynamically allocated. \ref stack data structure is used to store the operators untl they are needed
  * 
- * @param [in] infixExp The proposition logic formula expression in infix form ( @c char array)
- * @returns The proposition logic formula expression in prefix form ( @c char array)
+ * @see getPrecedence() 
+ * @see For examples see [Task 1](index.html#autotoc_md14 "Task 1 Examples")
  */
 char* getPrefix(char* infixExp){
   // find the length of input and output, and allocate memory
