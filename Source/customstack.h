@@ -6,7 +6,8 @@
  */
 
 /**
- * PREPROCESSOR GUARDS
+ * @def customstack_h
+ * @brief PREPROCESSOR GUARDS
  */
 #ifndef customstack_h
 #define customstack_h
@@ -19,9 +20,9 @@
  */
 struct stack
 {
-    int maxsize;  /**< The maximum number of elements that can be stored in the stack*/
-    int top;  /**< Index of the top element of the stack*/
-    char* items;  /**< A pointer to an array holding the data in the stack*/
+  int maxsize;  /**< The maximum number of elements that can be stored in the stack*/
+  int top;  /**< Index of the top element of the stack*/
+  char* items;  /**< A pointer to an array holding the data in the stack*/
 };
 
 /**
@@ -32,13 +33,14 @@ struct stack
  */
 struct stack* newStack(int capacity)
 {
-    struct stack *pt = (struct stack*)malloc(sizeof(struct stack));
- 
-    pt->maxsize = capacity + 1;
-    pt->top = -1;
-    pt->items = (char*)malloc(sizeof(char) * (capacity + 1));
- 
-    return pt;
+  struct stack *pt = (struct stack*)malloc(sizeof(struct stack));
+  
+  // initialize all stack members
+  pt->maxsize = capacity + 1;
+  pt->top = -1;
+  pt->items = (char*)malloc(sizeof(char) * (capacity + 1));
+  
+  return pt;
 }
  
 /**
@@ -49,8 +51,8 @@ struct stack* newStack(int capacity)
  * @retval 1 If the stack is EMPTY
  */
 int isEmpty(struct stack* pt) {
-    // Uses the stack's top to find out if its empty
-    return pt->top == -1;
+  // Uses the stack's top to find out if its empty
+  return pt->top == -1;
 }
  
 /**
@@ -61,8 +63,8 @@ int isEmpty(struct stack* pt) {
  * @retval 1 If the stack is FULL
  */
 int isFull(struct stack* pt) {
-    // Uses the stack's top and maxsize to find out if its empty
-    return pt->top == pt->maxsize - 1;
+  // Uses the stack's top and maxsize to find out if its empty
+  return pt->top == pt->maxsize - 1;
 }
  
 /**
@@ -75,15 +77,16 @@ int isFull(struct stack* pt) {
  */
 void push(struct stack* pt, char item)
 {
-    // check if the stack is full
-    if (isFull(pt))
-    {
-        // throw stack overflow error
-        printf("Error: Stack Overflow\n");
-        return;
-    }
-    // add an element and increment the top's index
-    pt->items[++pt->top] = item;
+  // check if the stack is full
+  if (isFull(pt))
+  {
+    // throw stack overflow error
+    printf("Error: Stack Overflow\n");
+    return;
+  }
+  
+  // add an element and increment the top's index
+  pt->items[++pt->top] = item;
 }
  
 /**
@@ -96,14 +99,14 @@ void push(struct stack* pt, char item)
  */
 char peek(struct stack* pt)
 {
-    // check if the stack is empty
-    if (!isEmpty(pt)) {
-        return pt->items[pt->top];
-    }
-    else {
-        printf("Stack is Empty\n");
-        return '\0';
-    }
+  // check if the stack is empty
+  if (!isEmpty(pt)) {
+    // return the item at top
+    return pt->items[pt->top];
+  } else {
+    printf("Stack is Empty\n");
+    return '\0';
+  }
 }
  
 /**
@@ -112,19 +115,20 @@ char peek(struct stack* pt)
  * @param [in] pt Pointer to the stack to be used
  * @returns The @c char at the top of the stack
  * 
- * @warning Using this function on an empty stack will lead to Stack Underflow Error
+ * @warning Using this function on an empty stack will lead to Stack Underflow Error and return @c \0
  */
 char pop(struct stack* pt)
 {
-    // check if the stack is empty
-    if (isEmpty(pt))
-    {
-        // throw stack underflow error
-        printf("Error: Stack Underflow\n");
-        return;
-    } 
-    // decrement stack size by 1 and (optionally) return the popped element
-    return pt->items[pt->top--];
+  // check if the stack is empty
+  if (isEmpty(pt))
+  {
+    // throw stack underflow error
+    printf("Error: Stack Underflow\n");
+    return '\0';
+  }
+
+  // decrement stack size by 1 and (optionally) return the popped element
+  return pt->items[pt->top--];
 }
 
 /**
@@ -132,12 +136,12 @@ char pop(struct stack* pt)
  * 
  * @param [in] pt Pointer to the stack to be used
  * 
- * @warning A stack should not be referenced after calling this function on it, as it might lead to undefined behaviour
+ * @warning A stack or its data should not be referenced after calling this function on it
  */
 void clearStack(struct stack* pt){
-    // free the data array
-    free(pt->items);
-    // free the stack structure
-    free(pt);
+  // free the data array in the stack
+  free(pt->items);
+  // free the stack structure
+  free(pt);
 }
 #endif
